@@ -184,6 +184,7 @@ section {
   object-fit: cover;
   transition: all 0.4s ease-in-out;
   filter: grayscale(100%);
+  border-radius: 2%;
 }
 .header-content .left-header .image img:hover {
   filter: grayscale(0);
@@ -204,6 +205,51 @@ section {
   margin: 1.5rem 0;
   line-height: 2rem;
 }
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 1rem;
+}
+.social .social-item {
+  position: relative;
+  border-radius: 15px;
+}
+.social .social-item .hover-items .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social .social-item .hover-items .icons .icon {
+  background-color: var(--color-grey-5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.social .social-item .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin: 0 1rem;
+}
+.social .social-item .hover-items .icons .icon:hover {
+  background-color: var(--color-secondary);
+}
+.social .social-item .hover-items .icons .icon:hover i {
+  color: var(--color-white);
+}
+
+.social-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
+}
+
 
 /*About*/
 .about-container {
